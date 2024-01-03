@@ -1,0 +1,8 @@
+Base API testing
+curl -N http://localhost:5173/api/subscribe?id=testing
+
+Timer API testing
+curl -X POST -H "Content-Type:application/json" -d "{\"time\":\"60\"}" http://localhost:5173/api/timer/start?id=testing
+curl -X POST http://localhost:5173/api/timer/pause?id=testing
+curl -X POST http://localhost:5173/api/timer/restart?id=testing
+curl -X POST -H "Content-Type:application/json" -d "{\"time\":\"60\"}" http://localhost:5173/api/timer/restart?id=testing
